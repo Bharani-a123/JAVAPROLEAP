@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaccine Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💉 Vaccine Tracker Dashboard</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add New User</h2>
+      <form id="userForm">
+        <input type="text" id="userName" placeholder="Full Name" required>
+        <input type="email" id="userEmail" placeholder="Email" required>
+        <input type="text" id="userContact" placeholder="Contact No">
+        <input type="date" id="userDob" placeholder="Date of Birth">
+        <button type="submit">Add User</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Vaccine</h2>
+      <form id="vaccineForm">
+        <input type="text" id="vaccineName" placeholder="Vaccine Name" required>
+        <input type="text" id="vaccineManufacturer" placeholder="Manufacturer">
+        <input type="number" id="vaccineDoses" placeholder="Recommended Doses" required>
+        <input type="number" id="vaccineInterval" placeholder="Interval (days)" required>
+        <button type="submit">Add Vaccine</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Record Vaccination</h2>
+      <form id="recordForm">
+        <input type="number" id="recordUserId" placeholder="User ID" required>
+        <input type="number" id="recordVaccineId" placeholder="Vaccine ID" required>
+        <input type="number" id="recordDose" placeholder="Dose Number" required>
+        <input type="date" id="recordDate" placeholder="Vaccination Date" required>
+        <button type="submit">Record Dose</button>
+      </form>
+    </section>
+
+    <section class="data-section">
+      <h2>View Data</h2>
+      <div class="buttons">
+        <button onclick="fetchUsers()">Show Users</button>
+        <button onclick="fetchVaccines()">Show Vaccines</button>
+        <button onclick="fetchRecords()">Show Records</button>
+        <button onclick="fetchUpcoming()">Upcoming Doses</button>
+        <button onclick="fetchMissed()">Missed Doses</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Vaccine Tracker</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
